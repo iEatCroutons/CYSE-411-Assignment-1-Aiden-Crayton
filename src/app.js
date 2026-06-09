@@ -46,13 +46,13 @@ function sanitizeUsername(input) {
 function renderNotifications(listEl, notifications) {
   if (!listEl) return;
 
-  listEl.innerHTML = ""; // Clear existing list (allowed here since we're not injecting user content)
+  listEl.innerHTML = ""; // To clear existing list 
 
   if (!Array.isArray(notifications)) return;
 
   notifications.forEach(note => {
     const li = document.createElement("li");
-    li.textContent = note; // Safe from DOM injection
+    li.textContent = note; 
     listEl.appendChild(li);
   });
 }
